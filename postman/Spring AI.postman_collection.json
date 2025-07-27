@@ -1,0 +1,95 @@
+{
+	"info": {
+		"_postman_id": "68ce8a77-178d-43b3-873a-9b82fd87df2d",
+		"name": "Spring AI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3572018"
+	},
+	"item": [
+		{
+			"name": "Chat WithStream",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/stream-chat?message=what you can do?",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"stream-chat"
+					],
+					"query": [
+						{
+							"key": "message",
+							"value": "what you can do?"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Chat WithText",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/stream-chat?message=what you can do?",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"stream-chat"
+					],
+					"query": [
+						{
+							"key": "message",
+							"value": "what you can do?"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Chat With Image",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "message",
+							"value": "Explain this",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/Users/vaibhavrodage/Downloads/image.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseURL}}/chat-with-image",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"chat-with-image"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "http://localhost:8080",
+			"type": "default"
+		}
+	]
+}
